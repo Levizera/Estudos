@@ -53,6 +53,16 @@ par = {2, 4, 6, 8}
 unindo = impar.union(par)
 
 
-# Vendo os valores iguais de dois sets
+# --> Vendo os valores iguais de dois sets
+# --> valores1.intersection(valores2)
+valores1 = {1, 2, 3, 4, 5, 6, 7, 'levi'}
+valores2 = {2, 3, 4, 'levi'}
+intersecting = valores1.intersection(valores2)
 
 
+# --> Vendo a diferença entre os sets
+# --> É mostrado os valores do primeiro set que não estão no segundo
+# --> valores1.intersection(valores2)
+setA = {1,2,3,4,5}
+setB = {1,2,3,7,8}
+diff = setA.difference(setB)
