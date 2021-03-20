@@ -1,0 +1,87 @@
+# COMO USAR POSTGRESQL DATABASE
+
+# COMANDOS BÁSICOS :
+
+\q --> sair
+\l --> lista todos os DBs
+\c nome_do_db --> conecta no database
+\d --> Mostra todas as TABLES do banco de dados
+\d nome_da_table --> Ver as infos da table
+\i /path/ --> Copiar database Local
+
+
+# COMANDOS DE START
+
+Criar Database --> initdb ˜/nome_do_db
+Start no DB --> pg_ctl -D ˜/nome_do_db start 
+Criar user --> createuser -P -s -e your_username
+Criar banco de dados --> createdb -O your_username your_database
+Entrar na "CLI" --> psql -U myDatabaseUsername -d myDatabaseName
+
+
+# COMANDOS PARA MANUSEAR BANCO DE DADOS
+
+CREATE DATABASE nome_do_db; --> Cria um novo banco de dados
+DROP DATABASE nome_do_db; --> Apaga o banco de dados
+CREATE TABLE nome_da_table (); --> Criar table
+DROP TABLE nome_da_table; --> Apaga Table
+
+
+# MOSTRANDO DADOS
+
+SELECT * FROM table_name; --> Ver todos os valores da table
+-    SELECT first_name FROM person_2;
+-    SELECT first_name, last_name FROM person_2;
+
+
+# MOSTRANDO OS DADOS DE FORMA ORGANIZADA
+
+# Primariamente o DB é organizado por ordem alfabetica, então ele vai sempre começar pela letra "A" se você estiver ordenando por forma "ASC", Ele começa pela letra "Z" se você ordenar por "DESC"
+
+// Exemplo:
+
+SELECT * FROM person_2 ORDER BY nome_da_coluna (ASC/DESC);
+
+// MOSTRAR UMA COLUNA DE FORMA ORGANIZADA
+SELECT first_name FROM person_2 ORDER BY first_name (ASC/DESC);
+
+// MOSTRAR UMA COLUNA SEM REPETIR VALORES
+SELECT DISTINCT language FROM person_2 ORDER BY language;
+
+
+# USANDO O "WHERE"
+
+SELECT * FROM person_2 WHERE gender = "Female";
+SELECT * FROM person_2 WHERE language = "English" ORDER BY first_name DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Como rodar postgres no terminal
+
+#user --> admin
+#password --> admin
+#database name --> dbstudy
+#Local name --> studydb
+
+# HOW TO CREATE A TABLE
+
+CREATE TABLE table_name (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    phone_number INT NOT NULL,
+    email VARCHAR(120) );
+
+
