@@ -39,12 +39,13 @@ SELECT * FROM table_name; --> Ver todos os valores da table
 # Primariamente o DB é organizado por ordem alfabetica, então ele vai sempre começar pela letra "A" se você estiver ordenando por forma "ASC", Ele começa pela letra "Z" se você ordenar por "DESC"
 
 // Exemplo:
-
 SELECT * FROM person_2 ORDER BY nome_da_coluna (ASC/DESC);
-
+ 
+ 
 // MOSTRAR UMA COLUNA DE FORMA ORGANIZADA
 SELECT first_name FROM person_2 ORDER BY first_name (ASC/DESC);
-
+ 
+ 
 // MOSTRAR UMA COLUNA SEM REPETIR VALORES
 SELECT DISTINCT language FROM person_2 ORDER BY language;
 
@@ -55,9 +56,27 @@ SELECT * FROM person_2 WHERE gender = "Female";
 SELECT * FROM person_2 WHERE language = "English" ORDER BY first_name DESC;
 
 
+// MOSTRANDO MAIS DE UM RESULTADO COM O "WHERE"
+SELECT * FROM person_2 WHERE language = "Portuguese" AND gender = "Male";
 
 
+// MOSTRANDO OS 10 PRIMEIROS ROWS DA TABLE
+SELECT * FROM person_2 LIMIT 10;
 
+
+// MOSTRANDO X VALORES DE UM PONTO AO OUTRO
+SELECT * FROM person_2 OFFSET 5 LIMIT 5;
+
+
+// OUTRA OPÇÃO AO INVES DE LIMIT
+SELECT * FROM person_2 OFFSET 5 FETCH FIRST 5 ROW ONLY;
+
+
+// "OR" keyword
+SELECT * FROM person_2 WHERE language = 'English' OR language = 'Portuguese'
+
+
+// 
 
 
 

@@ -1,0 +1,1 @@
+pkg install vim && pkg install python && pkg install git && pkg install clang && pkg install wget && pkg install curl && pkg install bash && pkg install postgresql
