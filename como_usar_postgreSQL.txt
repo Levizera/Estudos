@@ -12,7 +12,7 @@
 
 # COMANDOS DE START
 
-Criar Database --> initdb ˜/nome_do_db
+Criar Database --> initdb /nome_do_db
 Start no DB --> pg_ctl -D ˜/nome_do_db start 
 Criar user --> createuser -P -s -e your_username
 Criar banco de dados --> createdb -O your_username your_database

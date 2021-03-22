@@ -1,1 +1,8 @@
 pkg install vim && pkg install python && pkg install git && pkg install clang && pkg install wget && pkg install curl && pkg install bash && pkg install postgresql
+
+
+set number
+set cursorline
+set tabstop=4
+set complete-=i
+syntax enable
